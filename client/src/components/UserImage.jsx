@@ -10,7 +10,7 @@ const UserImage = ({ image, size = "60px" }) => {
       }}
     >
       <img
-        src={`http://localhost:3001/assets/${image}`}
+        src={image.startsWith("http") ? image : `${process.env.REACT_APP_BASE_URL}/assets/${image}`}
         alt="user"
         style={{
           objectFit: "cover",
