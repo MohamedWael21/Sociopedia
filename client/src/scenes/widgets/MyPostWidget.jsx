@@ -126,7 +126,7 @@ const MyPostWidget = ({ picturePath }) => {
         <FlexBetween gap="0.25rem" onClick={() => setIsImage(!isImage)}>
           <ImageOutlined sx={{ color: mediumMain }} />
           <Typography
-            color={mediumMain}
+            color={palette.neutral.main}
             sx={{
               "&:hover": {
                 cursor: "pointer",
@@ -141,15 +141,15 @@ const MyPostWidget = ({ picturePath }) => {
           <>
             <FlexBetween gap="0.25rem">
               <GifBoxOutlined sx={{ color: mediumMain }} />
-              <Typography color={mediumMain}>Clip</Typography>
+              <Typography color={palette.neutral.main}>Clip</Typography>
             </FlexBetween>
             <FlexBetween gap="0.25rem">
               <AttachFileOutlined sx={{ color: mediumMain }} />
-              <Typography color={mediumMain}>Attachment</Typography>
+              <Typography color={palette.neutral.main}>Attachment</Typography>
             </FlexBetween>
             <FlexBetween gap="0.25rem">
               <MicOutlined sx={{ color: mediumMain }} />
-              <Typography color={mediumMain}>Audio</Typography>
+              <Typography color={palette.neutral.main}>Audio</Typography>
             </FlexBetween>
           </>
         ) : (
@@ -164,9 +164,18 @@ const MyPostWidget = ({ picturePath }) => {
             color: palette.background.alt,
             backgroundColor: palette.primary.main,
             borderRadius: "3rem",
+            "&.Mui-disabled": {
+              color: palette.background.alt,
+              backgroundColor: palette.primary.main,
+              opacity: 0.7,
+            },
+            "&:hover": {
+              backgroundColor: palette.primary.light,
+              cursor: "pointer",
+            },
           }}
         >
-          Post
+          POST
         </Button>
       </FlexBetween>
     </WidgetWrapper>

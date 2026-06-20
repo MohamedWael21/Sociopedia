@@ -242,6 +242,11 @@ const Form = () => {
                 p: "1rem",
                 backgroundColor: palette.primary.main,
                 color: palette.background.alt,
+                "&.Mui-disabled": {
+                  color: palette.background.alt,
+                  backgroundColor: palette.primary.main,
+                  opacity: 0.7,
+                },
                 "&:hover": { color: palette.primary.main },
               }}
             >
